@@ -1,0 +1,2 @@
+follow skills as required. frontend-design, ui-ux-pro-max, web-design-guidelines, polish, color-palette, design-context, design-taste-frontend, high-end-visual-design, astro, seo, copy-editing, framer-motion-animator, prompt-engineering, shadcn, laravel-specialist, php-pro, eloquent-best-practices, laravel-database-optimization, auth-implementation-patterns, webapp-testing, api-development, livewire-development, laravel-security, troubleshooting, code-simplifier, project-docs, phpunit-skill, pest-testing and tailwind skills is must  follow prd.md and build whole website.
+ 
