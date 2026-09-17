@@ -27,6 +27,7 @@ php artisan storage:link || true
 
 # Run migrations and warm up caches at boot (env vars are only available now)
 php artisan migrate --force || true
+php artisan db:seed --force || true
 php artisan config:cache
 php artisan view:cache
 
