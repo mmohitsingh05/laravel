@@ -23,7 +23,7 @@ return Application::configure(basePath: dirname(__DIR__))
                 $request->session()->invalidate();
                 $request->session()->regenerateToken();
 
-                return redirect()->route('login');
+                return redirect('/');
             }
         });
 
