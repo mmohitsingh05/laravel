@@ -14,7 +14,7 @@ mkdir -p storage/framework/cache/data \
          bootstrap/cache
 
 # Prepare the SQLite database when it is the configured connection
-if [ "${DB_CONNECTION}" = "sqlite" ]; then
+if [ "${DB_CONNECTION:-sqlite}" = "sqlite" ]; then
     DB_FILE="${DB_DATABASE:-database/database.sqlite}"
     touch "${DB_FILE}"
     chown www-data:www-data "${DB_FILE}"
