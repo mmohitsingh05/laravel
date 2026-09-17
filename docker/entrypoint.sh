@@ -25,8 +25,15 @@ chown -R www-data:www-data storage bootstrap/cache
 # Link public storage (ignore if it already exists)
 php artisan storage:link || true
 
-# Run migrations and warm up caches at boot (env vars are only available now)
-php artisan migrate --force || true
+# Run migrations (retry while the database is still starting up) and seed
+for attempt in 1 2 3 4 5; do
+    if php artisan migrate --force; then
+        break
+    fi
+    echo "Database not ready (attempt ${attempt}), retrying in 3s..."
+    sleep 3
+done
+
 php artisan db:seed --force || true
 php artisan config:cache
 php artisan view:cache
